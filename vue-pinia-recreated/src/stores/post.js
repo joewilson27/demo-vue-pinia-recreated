@@ -11,6 +11,7 @@ export const usePostStore = defineStore({
   }),
   getters: {
     getPostsPerAuthor: (state) => {
+      // authorId is an argument for this getters
       return (authorId) => state.posts.filter((post) => post.userId === authorId)
     }
   },

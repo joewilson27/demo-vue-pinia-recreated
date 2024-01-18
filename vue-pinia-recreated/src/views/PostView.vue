@@ -23,5 +23,6 @@ const route = useRoute()
 const storePost = usePostStore()
 const storeAuthor = useAuthorStore()
 
-
+storeAuthor.fetchAuthors()
+storePost.fetchPost(route.params.id)
 </script>
