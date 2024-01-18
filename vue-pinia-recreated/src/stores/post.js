@@ -11,6 +11,10 @@ export const usePostStore = defineStore({
   }),
   getters: {
     getPostsPerAuthor: (state) => {
+      /**
+       * Getters are just computed properties behind the scenes, so it's not possible to pass any 
+       * parameters to them. However, you can return a function from the getter to accept any arguments
+       */
       // authorId is an argument for this getters
       return (authorId) => state.posts.filter((post) => post.userId === authorId)
     }
